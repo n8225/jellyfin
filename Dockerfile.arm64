@@ -34,4 +34,4 @@ RUN apt-get update \
 COPY --from=builder /jellyfin /jellyfin
 EXPOSE 8096
 VOLUME /cache /config /media
-ENTRYPOINT ./jellyfin/jellyfin --datadir /config --cachedir /cache
+ENTRYPOINT /jellyfin/jellyfin --datadir /config --cachedir /cache
